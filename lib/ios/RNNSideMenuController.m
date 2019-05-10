@@ -17,6 +17,12 @@
 	[self setControllers:childViewControllers];
 	self = [super initWithCenterViewController:self.center leftDrawerViewController:self.left rightDrawerViewController:self.right];
 	
+	// ---- 一時的な修正: Drawer の style を RNN v1 と同様にする
+	[self setShowsShadow:NO];
+	[self setCenterOverlayColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.2]];
+	[self setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
+	// ----
+	
 	self.presenter = presenter;
 	[self.presenter bindViewController:self];
 	
