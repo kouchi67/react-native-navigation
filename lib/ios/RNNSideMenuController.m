@@ -20,6 +20,8 @@
 	[self setShowsShadow:NO];
 	[self setCenterOverlayColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.2]];
 	[self setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
+	double drawerWidth = [[UIScreen mainScreen] bounds].size.width * 0.85;
+	[self side:MMDrawerSideRight width:drawerWidth];
 	
 	self.presenter = presenter;
 	[self.presenter bindViewController:self];
