@@ -18,5 +18,8 @@
   },
   "include": [
     "./lib/src/**/*"
+  ],
+  "exclude": [
+    "./**/*.test.tsx"
   ]
 }
